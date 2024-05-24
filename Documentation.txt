@@ -1,0 +1,17 @@
+*The white color bboxes represent the Detections from YOLOv8n model; bboxes of any colour OTHER THAN white represent Kalman Filter Predictions*
+
+Object Detection
+Model: YOLOv8n, trained on the Visdrone dataset for 70 epochs leveraging the Ultralytics library is utilized for object detection tasks. The training code is referenced within the main.py file (commented).
+Weights: The optimized weights for the YOLOv8n model are stored in the 'YOLOv8n_trained_weights.pt' file.
+
+SAHI Library - https://github.com/obss/sahi
+Purpose: The SAHI library is employed to enhance object detection performance. It does so by slicing the input images or frames into smaller segments, allowing for more detailed detection before aggregating the results. This approach is especially beneficial in scenarios with small or partially obscured objects.
+
+Norfair Library - https://github.com/tryolabs/norfair
+Norfair is used for object tracking, implementing Kalman filters to predict object movements between frames. The library allows for customizable tracking parameters, which have been fine-tuned for each video through manual trial and error.
+
+Object Tracking Configuration
+The Apply_Kalman_Filter() function - The parameters for each video are explicitly defined within the main.py file. By default, the parameters are set to those optimized for the first video input.
+Videos
+
+Videos are downloaded from YouTube using the pytube library, with links specified in the video_links list. These videos serve as inputs for both detection and tracking operations.

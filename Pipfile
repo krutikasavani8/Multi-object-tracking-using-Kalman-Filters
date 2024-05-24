@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = false
+name = "pip_conf_index_global"
+
+[packages]
+ipywidgets = "*"
+pydantic = "*"
+filterpy = "==1.4.5"
+joblib = "==1.1.0"
+torch = "*"
+torchvision="*"
+mutliprocessing="*"
+opencv-python="*"
+ultralytics="*"
+sahi="*"
+norfair="*"
+pytube="*"
+
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

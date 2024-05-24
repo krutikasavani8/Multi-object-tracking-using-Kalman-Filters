@@ -1,0 +1,9 @@
+numpy
+opencv-python
+matplotlib
+torch
+torchvision
+ultralytics
+sahi
+norfair
+pytube
